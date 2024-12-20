@@ -26,7 +26,7 @@ byte fan_curve(float temp)
 
 float read_temp(int pin)
 {
-    return (analogRead(pin) * 0.489) - 273.15;
+    return ((analogRead(pin) * 5000) / 1000) / 10;
 }
 
 void set_fanspeed(byte spd)
